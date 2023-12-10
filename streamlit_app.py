@@ -40,3 +40,5 @@ my_data_rows = my_cur.fetchone()
 
 add_my_fruit = streamlit.text_input('What fruit would you like information about?','jackfruit')
 streamlit.write('The user entered ', fruit_choice)
+
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")

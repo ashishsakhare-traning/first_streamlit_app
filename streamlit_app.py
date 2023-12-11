@@ -41,6 +41,8 @@ try:
 
 
 streamlit.header("The fruit load list contains:")
+
+
 def get_fruit_load_list():
      with my_cnx.cursor() as my_cur:
           mu_cur.execute("select * from fruit_load_list")

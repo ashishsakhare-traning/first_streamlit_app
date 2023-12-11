@@ -48,9 +48,13 @@ try:
 # write your own comment - what does this do?
 
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchone()
-streamlit.text("The fruit load list contains:")
-streamlit.text(my_data_row)
+streamlit.header("The fruit load list contains:")
+def get_fruit_load_list():
+     with my_cnx.cursor() as my_cur:
+          mu_cur.execute("select * from fruit_load_list")
+          return my_cur.fetchall()
+
+if dtreamlit.button('get fruit load list'):
+     my_cn = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+     my_data_rows = get_fruit_load_list()
+     streamlit.dataframe(my_data_rows)

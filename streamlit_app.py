@@ -40,7 +40,7 @@ try:
        streamlit.datafram(back_from_function)
 
 
-streamlit.header("The fruit load list contains:")
+
 
 
 def get_fruit_load_list():

@@ -42,13 +42,3 @@ try:
 
 
 
-
-def get_fruit_load_list():
-     with my_cnx.cursor() as my_cur:
-          mu_cur.execute("select * from fruit_load_list")
-          return my_cur.fetchall()
-
-if dtreamlit.button('get fruit load list'):
-     my_cn = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-     my_data_rows = get_fruit_load_list()
-     streamlit.dataframe(my_data_rows)
